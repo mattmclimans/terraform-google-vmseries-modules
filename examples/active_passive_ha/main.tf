@@ -46,7 +46,7 @@ locals {
 
 # Retrieve the untrust subnet ID to use default gateway in bootstrap.xml
 data "google_compute_subnetwork" "untrust" {
-  self_link = module.vpc_trust.subnets_self_links[0]
+  self_link = module.vpc_untrust.subnets_self_links[0]
   region    = var.region
 }
 
